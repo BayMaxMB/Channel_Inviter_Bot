@@ -33,7 +33,10 @@ bot.onText(/\/help( .+)*/, (msg, [source, match]) => {
 
 // request.post({
 // 	url: `https://api.telegram.org/bot${config.TOKEN}/createChatInviteLink`,
-// 	json: {chat_id: config.channelID}
+// 	json: {
+// 		chat_id: config.channelID,
+// 		member_limit: 1
+// 	}
 // }, (error, response, body) => {
 // 	console.log(body);
 // });
@@ -42,8 +45,9 @@ request.post({
 	url: `https://api.telegram.org/bot${config.TOKEN}/editChatInviteLink`,
 	json: {
 		chat_id: config.channelID,
-		invite_link: 'https://t.me/joinchat/mxCMroMG4WRlNzdi',
-		member_limit: 1
+		// invite_link: 'https://t.me/joinchat/mxCMroMG4WRlNzdi',
+		invite_link: 'https://t.me/joinchat/m1FnQ6R1z7Q3MmY6',
+		// member_limit: 999
 	}
 }, (error, response, body) => {
 	console.log(body);

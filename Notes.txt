@@ -1,0 +1,22 @@
+If Channel is public:
+	If Link has 1 slot:
+		If 2 user enter from Link:
+			1st user counted as joined from @username
+			2nd (last) user counted to Link's owner
+		TG Database Update takes some time, in this time many people can join fastly.
+			It will not count to Link owner.	
+	If already joined member rejoins:
+		Will not count to owner of Link
+		Even will not count to other owner's Link
+
+	Now works well: (With second channel)
+		If user didn't join from public link yet
+		If user 1 time join/rejoin using public link:
+			System work as 1st part (everthing mess up, no count to link owners)
+Else (private):
+	Works fine even joined from other links
+	Even pressing join at the same time: says expired
+
+
+If editLink without member_limit: (both type channel)
+	member_limit will be set to number of joined users
